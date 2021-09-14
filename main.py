@@ -51,7 +51,6 @@ def startApp():
         if(is_downloadable(response['url'])):
             print("Yes You can download.")
             download(response['url'],device)
-
-
+            
 #run scaduler 
 scheduler.start()
