@@ -1,2 +1,4 @@
 cameras/
 env/
+.DS_Store
+.gitignore
