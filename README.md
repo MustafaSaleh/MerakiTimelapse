@@ -1,4 +1,4 @@
-## MerakiTimelapse
+## Meraki Time-lapse
 If you need to create timelapse for one or five years using Meraki Camere, this code can help you to take snapshot each few minutes,hours or even dayes.
 This script will create folder foreach camera to save snapshots inside, the folder name will use camera serialnumber.
 
@@ -13,7 +13,7 @@ It's recommended to use env, follow below steps:
  6. Incase create folder `cameras` , where will we save images. 
  7. Run main.py `python3 main.py`  
 
-**How to create a vide?**
+**How to create time-lapse video?**
 just run `python3 create_video.py` 
 @ the terminal will ask for which camera serialnumber, and how many frames per second, this will create file mp4 at cameras folder
 
