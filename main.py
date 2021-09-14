@@ -6,9 +6,10 @@ from datetime import datetime
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 
-API_KEY = 'e225e5c727d6107b15b89b0bae02aba45e106176'
+API_KEY = 'APIKEY'
+scheduler_minutes= 2 #minutes
 #cameras 
-serialNumbers= ['Q2NV-6XBT-YECK']
+serialNumbers= ['CAMERA_SERIAL_NUMBER']
 dashboard = None
 
 #Ask Meraki API to generate Snapshot
@@ -41,7 +42,7 @@ def download(url,device):
 
 #startApp
 scheduler = BlockingScheduler()
-@scheduler.scheduled_job(IntervalTrigger(minutes=2))
+@scheduler.scheduled_job(IntervalTrigger(minutes=scheduler_minutes))
 def startApp():
     global dashboard
     dashboard = meraki.DashboardAPI(API_KEY,print_console=False,suppress_logging=True)
